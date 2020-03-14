@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "concurrently \"npm run build:watch\" \"npm run serve\"",
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "vue-cli-service serve --host localhost",
+    "build": "vue-cli-service build --watch",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
