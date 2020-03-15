@@ -16,7 +16,7 @@
       <router-link to="/cart">
         <div class="menu-item">
           <img src="/images/love.png">
-          <p>0 items</p>
+          <p>{{this.$root.$data.cart.length}} items</p>
         </div>
       </router-link>
     </div>
@@ -24,6 +24,13 @@
   <router-view />
 </div>
 </template>
+
+<script>
+
+
+</script>
+
+
 
 <style>
 * {

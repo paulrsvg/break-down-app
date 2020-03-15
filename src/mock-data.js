@@ -86,7 +86,7 @@ let mock = [{
   },
   {
     id: 13,
-    name: "Feta Chees",
+    name: "Feta Cheese",
     price: "$6.92",
     country: "Brazil",
     image: "feta-cheese.jpg"
