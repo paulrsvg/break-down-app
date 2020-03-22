@@ -4,13 +4,19 @@
 
     <div class="wrapper">
     <div class="moves">
-      <p v-if="this.$root.$data.skillset.length === 0">Skillset is empty. Add some moves!</p>
+      <p v-if="this.$root.$data.skillset.length === 0">Your skillset is empty. Add some moves!</p>
         <div class="move" v-for="move in skillset" :key="move.id">
         
         <div class="info">
-          <p>{{move.name}} - <em>{{move.category}}</em> | <strong>{{move.difficulty}}</strong></p>
+          <p>
+            {{move.name}} - 
+            <em>{{move.category}}</em> | 
+            <strong>{{move.difficulty}}</strong>
+            
+          </p>
+          <button class="auto" @click="removeMove(move)">- remove</button>
         
-            <button class="auto" @click="removeMove(move)">- remove</button>
+            
         </div>
         </div>
     </div>
@@ -69,7 +75,11 @@ export default {
 .info {
   /* background: #F2921D;
   color: #000; */
-  padding: 5px;
+  padding: 7px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   /* height: 90px; */
 }
 

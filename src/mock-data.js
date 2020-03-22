@@ -251,7 +251,7 @@ let mock = [{
     category: "Power Moves",
     difficulty: "Beginner"
   },
-  //Power L2
+  //power L2
   {
     id: 42,
     name: "Handglide",
@@ -290,7 +290,7 @@ let mock = [{
   },
   {
     id: 48,
-    name: "Gorillas",
+    name: "Headspin",
     category: "Power Moves",
     difficulty: "Intermediate"
   },
@@ -407,7 +407,7 @@ let mock = [{
   },
   {
     id: 67,
-    name: "Chair",
+    name: "Chair Freeze",
     category: "Freezes",
     difficulty: "Intermediate"
   },
