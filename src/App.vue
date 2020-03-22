@@ -13,10 +13,10 @@
           <p>Browse</p>
         </div>
       </router-link>
-      <router-link to="/cart">
+      <router-link to="/skillset">
         <div class="menu-item">
           <img src="/images/love.png">
-          <p>{{this.$root.$data.cart.length}} items</p>
+          <p>{{this.$root.$data.skillset.length}} moves</p>
         </div>
       </router-link>
     </div>

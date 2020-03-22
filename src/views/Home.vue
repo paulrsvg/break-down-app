@@ -9,17 +9,17 @@
       </form>
     </div>
   </div>
-  <ProductList :products="products" />
+  <MoveList :moves="moves" />
 </div>
 </template>
 
 <script>
-import ProductList from "../components/ProductList.vue"
+import MoveList from "../components/MoveList.vue"
 
 export default {
   name: 'Home',
   components: {
-    ProductList
+    MoveList
   },
   data() {
     return {
@@ -27,8 +27,8 @@ export default {
     }
   },
   computed: {
-    products() {
-      return this.$root.$data.products.filter(product => product.name.toLowerCase().search(this.searchText) >= 0);
+    moves() {
+      return this.$root.$data.moves.filter(move => move.name.toLowerCase().search(this.searchText) >= 0);
     }
   },
 }

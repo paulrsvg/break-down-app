@@ -1,17 +1,17 @@
 <template>
 <div class="wrapper">
-  <div class="products">
-    <div class="product" v-for="product in products" :key="product.id">
+  <div class="moves">
+    <div class="move" v-for="move in moves" :key="move.id">
       <div class="info">
-        <h1>{{product.name}}</h1>
-        <p>{{product.country}}</p>
+        <h1>{{move.name}}</h1>
+        <p>{{move.category}}</p>
       </div>
       <div class="image">
-        <img :src="'/images/products/'+product.image">
+        <img :src="'/images/moves/'+move.image">
       </div>
       <div class="price">
-        <h2>{{product.price}}</h2>
-        <button class="auto" @click="addProduct(product)">Add to Cart</button>
+        <h2>{{move.price}}</h2>
+        <button class="auto" @click="addMove(move)">Add to Cart</button>
       </div>
     </div>
   </div>
@@ -20,12 +20,12 @@
 
 <script>
 export default {
-  name: 'ProductList',
+  name: 'MoveList',
   props: {
-    products: Array
+    moves: Array
   },
   methods: {
-    addProduct(name) {
+    addMove(name) {
       this.$root.$data.cart.push(name);
     }
   }
@@ -42,27 +42,27 @@ export default {
   justify-content: center;
 }
 
-.products {
+.moves {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.product {
+.move {
   margin: 10px;
   margin-top: 50px;
   width: 200px;
 }
 
-.product img {
+.move img {
   border: 2px solid #333;
   height: 250px;
   width: 200px;
   object-fit: cover;
 }
 
-.product .image {
+.move .image {
   display: flex;
   justify-content: center;
   margin-bottom: 5px;

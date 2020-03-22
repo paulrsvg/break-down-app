@@ -3,16 +3,16 @@
 
 
     <div class="wrapper">
-    <div class="products">
-      <p v-if="this.$root.$data.cart.length === 0">Cart is empty. Add some items!</p>
-        <div class="product" v-for="product in cart" :key="product.id">
+    <div class="moves">
+      <p v-if="this.$root.$data.skillset.length === 0">Skillset is empty. Add some moves!</p>
+        <div class="move" v-for="move in skillset" :key="move.id">
      
         
-            <img :src="'/images/products/'+product.image">
+            <img :src="'/images/moves/'+move.image">
         
         <div class="price">
-            <h2>{{product.name}} - {{product.price}}</h2>
-            <button class="auto" @click="removeProduct(product)">Remove</button>
+            <h2>{{move.name}} - {{move.difficulty}}</h2>
+            <button class="auto" @click="removeMove(move)">Remove</button>
         </div>
         </div>
     </div>
@@ -33,14 +33,14 @@ export default {
     }
   },
   computed: {
-    cart() {
-      return this.$root.$data.cart;
+    skillset() {
+      return this.$root.$data.skillset;
     }
   },
   methods: {
-    removeProduct(product){
-      let index = this.$root.$data.cart.indexOf(product);
-      this.$root.$data.cart.splice(index, 1);
+    removeMove(move){
+      let index = this.$root.$data.skillset.indexOf(move);
+      this.$root.$data.skillset.splice(index, 1);
     }
   },
 }
@@ -53,26 +53,26 @@ export default {
   justify-content: center;
 }
 
-.products {
+.moves {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.product {
+.move {
   margin: 1em;
   width: 500px;
 }
 
-.product img {
+.move img {
   border: 2px solid #333;
   height: 125px;
   width: 100px;
   object-fit: cover;
 }
 
-.product .image {
+.move .image {
   display: flex;
   justify-content: center;
   margin-bottom: 5px;

@@ -2,36 +2,37 @@
 <div>
   <div class="pure-menu pure-menu-horizontal">
     <ul class="pure-menu-list">
-      <li class="pure-menu-item"><a @click="select('United States')" href="#" class="pure-menu-link">United States</a></li>
-      <li class="pure-menu-item"><a @click="select('Canada')" href="#" class="pure-menu-link">Canada</a></li>
-      <li class="pure-menu-item"><a @click="select('Mexico')" href="#" class="pure-menu-link">Mexico</a></li>
-      <li class="pure-menu-item"><a @click="select('Brazil')" href="#" class="pure-menu-link">Brazil</a></li>
+      <li class="pure-menu-item"><a @click="select('Toprock')" href="#" class="pure-menu-link">Toprock</a></li>
+      <li class="pure-menu-item"><a @click="select('Footwork')" href="#" class="pure-menu-link">Footwork</a></li>
+      <li class="pure-menu-item"><a @click="select('Power Moves')" href="#" class="pure-menu-link">Power Moves</a></li>
+      <li class="pure-menu-item"><a @click="select('Freezes')" href="#" class="pure-menu-link">Freezes</a></li>
+      <li class="pure-menu-item"><a @click="select('Drops')" href="#" class="pure-menu-link">Drops</a></li>
     </ul>
   </div>
-  <ProductList :products="products" />
+  <MoveList :moves="moves" />
 </div>
 </template>
 
 <script>
-import ProductList from "../components/ProductList.vue"
+import MoveList from "../components/MoveList.vue"
 export default {
   name: 'Browse',
   components: {
-    ProductList
+    MoveList
   },
   data() {
     return {
-      country: '',
+      category: '',
     }
   },
   computed: {
-    products() {
-      return this.$root.$data.products.filter(product => product.country === this.country);
+    moves() {
+      return this.$root.$data.moves.filter(move => move.category === this.category);
     }
   },
   methods: {
-    select(country) {
-      this.country = country;
+    select(category) {
+      this.category = category;
     }
   }
 }
