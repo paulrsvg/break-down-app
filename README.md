@@ -1,5 +1,5 @@
-# grocery-store
-
+# break-down-app
+an app for hip hop dancers(breakers) to organize their moves and create new combos.
 ## Project setup
 ```
 npm install
