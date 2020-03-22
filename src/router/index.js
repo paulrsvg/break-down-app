@@ -18,9 +18,9 @@ const routes = [
     component: Browse
   },
   {
-    path: '/cart',
-    name: 'Cart',
-    component: Cart
+    path: '/skillset',
+    name: 'Skillset',
+    component: Skillset
   },
 ];
 
