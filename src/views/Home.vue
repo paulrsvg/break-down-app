@@ -2,10 +2,12 @@
 
 <template>
 <div>
+  <span class = "wrapper">Search for dance moves to add to your skillset below:</span><br>
   <div class="wrapper">
+    
     <div class="search">
       <form class="pure-form">
-        <i class="fas fa-search"></i><input v-model="searchText" />
+        <i class="fas fa-search search-icon"></i><input v-model="searchText" />
       </form>
     </div>
   </div>
@@ -52,7 +54,7 @@ form {
   width: 100%;
 }
 
-i {
+.search-icon {
   display: table-cell;
   padding-left: 10px;
   width: 1px;

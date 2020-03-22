@@ -6,13 +6,11 @@
     <div class="moves">
       <p v-if="this.$root.$data.skillset.length === 0">Skillset is empty. Add some moves!</p>
         <div class="move" v-for="move in skillset" :key="move.id">
-     
         
-            <img :src="'/images/moves/'+move.image">
+        <div class="info">
+          <p>{{move.name}} - <em>{{move.category}}</em> | <strong>{{move.difficulty}}</strong></p>
         
-        <div class="price">
-            <h2>{{move.name}} - {{move.difficulty}}</h2>
-            <button class="auto" @click="removeMove(move)">Remove</button>
+            <button class="auto" @click="removeMove(move)">- remove</button>
         </div>
         </div>
     </div>
@@ -63,26 +61,16 @@ export default {
 .move {
   margin: 1em;
   width: 500px;
-}
-
-.move img {
   border: 2px solid #333;
-  height: 125px;
-  width: 100px;
-  object-fit: cover;
 }
 
-.move .image {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5px;
-}
+
 
 .info {
-  background: #F2921D;
-  color: #000;
-  padding: 10px 30px;
-  height: 80px;
+  /* background: #F2921D;
+  color: #000; */
+  padding: 5px;
+  /* height: 90px; */
 }
 
 .info h1 {
@@ -93,21 +81,14 @@ export default {
   font-size: 14px;
 }
 
-.info p {
-  margin: 0px;
-  font-size: 10px;
-}
 
 
-.price {
-  display: flex;
-}
 
 button {
-  height: 50px;
-  background: #000;
-  color: white;
-  border: none;
+  height: 30px;
+  /* background: #000;
+  color: white; */
+  border: 2px solid black;
 }
 
 .auto {

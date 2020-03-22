@@ -3,14 +3,13 @@
   <div class="moves">
     <div class="move" v-for="move in moves" :key="move.id">
       <div class="info">
-        <h1>{{move.name}}</h1>
-        <h3>{{move.difficulty}}</h3>
-        <h3>{{move.category}}</h3>
-        
-        <button class="auto" @click="addMove(move)">Add to Skillset</button>
+        <h3>{{move.name}}</h3>
+        <p>
+          <em>{{move.category}}</em><br>
+          <strong>{{move.difficulty}}</strong>        
+        </p>
+        <button class="auto" @click="addMove(move)">+ add to skillset</button>
       </div>
-      
-      
     </div>
   </div>
 </div>
@@ -24,6 +23,7 @@ export default {
   },
   methods: {
     addMove(name) {
+      if(!this.$root.$data.skillset.includes(name)) //check if already in array (only allow one of each move)
       this.$root.$data.skillset.push(name);
     }
   }
@@ -35,9 +35,10 @@ export default {
 <style scoped>
 /* scoped styles only affect this component */
 .wrapper {
+  /* max-width: 50em; */
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .moves {
@@ -50,53 +51,22 @@ export default {
 .move {
   margin: 10px;
   margin-top: 50px;
-  width: 200px;
+  /* width: 250px; */
   border: 2px solid #333;
+  border-radius: 3px;
 }
-
-/* .move img {
-  border: 2px solid #333;
-  height: 250px;
-  width: 200px;
-  object-fit: cover;
-} */
-
-/* .move .image {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5px;
-} */
 
 .info {
-  background: #F2921D;
-  color: #000;
-  padding: 10px 30px;
-  height: 200px;
-}
-
-.info h1 {
-  font-size: 16px;
-}
-
-.info h2 {
-  font-size: 14px;
-}
-
-.info p {
-  margin: 0px;
-  font-size: 10px;
-}
-
-
-.price {
-  display: flex;
+  /* background: #F2921D; */
+  padding: 22px;
+  height: 250px;
 }
 
 button {
-  height: 50px;
-  background: #000;
-  color: white;
-  border: none;
+  height: 25px;
+  /* background: #000; */
+  /* color: white; */
+  border: 2px solid black;
 }
 
 .auto {

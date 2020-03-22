@@ -3,20 +3,20 @@
   <div id="menu">
     <div id="brand">
       <router-link to="/">
-        <img src="/images/logo.png">
+        <div class="menu-item">
+          <h1><em>break down</em></h1>
+        </div>
       </router-link>
     </div>
     <div id="side">
       <router-link to="/browse">
-        <div class="menu-item browse">
-          <img src="/images/globe.png">
-          <p>Browse</p>
+        <div class="menu-item">
+          <p>categories</p>
         </div>
       </router-link>
       <router-link to="/skillset">
         <div class="menu-item">
-          <img src="/images/love.png">
-          <p>{{this.$root.$data.skillset.length}} moves</p>
+          <p>skillset ({{this.$root.$data.skillset.length}} moves)</p>
         </div>
       </router-link>
     </div>
@@ -38,26 +38,31 @@
 }
 
 body {
-  margin: 50px 100px;
+    font-family: 'Karla', sans-serif;
+    background-color: #f5f7fa; /*find a nice tan??*/
+    max-width: 50em;
+    margin: 2em auto; /*maybe not auto? hmm*/
+    line-height:1.4em;
+    font-size:18px;
+    color: #002639;  /*   an almost black */
+    padding:0 10px;
 
 }
 
 #menu {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-column-gap: 5px;
-  grid-template-areas: "none brand side";
+  grid-template-areas: "brand side";
   margin-bottom: 50px;
 }
 
-#menu a {
-  color: #B84901;
-}
+
 
 #brand {
   grid-area: brand;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 #brand img {
@@ -70,20 +75,13 @@ body {
   justify-content: flex-end;
 }
 
-#side img {
-  width: 50px;
-}
+
 
 .menu-item {
   display: flex;
   flex-direction: column;
+  margin: 1em;
 }
 
-.menu-item p {
-  margin: 0px;
-}
 
-.browse {
-  margin-right: 50px;
-}
 </style>

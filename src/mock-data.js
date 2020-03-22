@@ -161,7 +161,7 @@ let mock = [{
   },
   {
     id: 27,
-    name: "1 Step/Helicopter/Coffee Grinder",
+    name: "Coffee Grinder",
     category: "Footwork",
     difficulty: "Intermediate"
   },
@@ -290,7 +290,7 @@ let mock = [{
   },
   {
     id: 48,
-    name: "Buddha Spins/Gorillas",
+    name: "Gorillas",
     category: "Power Moves",
     difficulty: "Intermediate"
   },
@@ -340,13 +340,13 @@ let mock = [{
   //freezes L1
   {
     id: 56,
-    name: "L Freeze",
+    name: "Nike Freeze",
     category: "Freezes",
     difficulty: "Beginner"
   },
   {
     id: 57,
-    name: "Y Freeze",
+    name: "Baby Freeze",
     category: "Freezes",
     difficulty: "Beginner"
   },
@@ -537,13 +537,13 @@ let mock = [{
   //drop L3
   {
     id: 88,
-    name: "Valdez/Monkey Flip",
+    name: "Monkey Flip",
     category: "Drops",
     difficulty: "Advanced"
   },
   {
     id: 89,
-    name: "Rubberbands/Kip-up",
+    name: "Rubberbands",
     category: "Drops",
     difficulty: "Advanced"
   },
